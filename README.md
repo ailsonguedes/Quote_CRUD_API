@@ -1,18 +1,18 @@
-<h1 align='center'> API de Catálogo de Livros </h1>
+<h1 align='center'> API de Citações </h1>
 
 <p align='center'>Esta é uma API que gerencia citações de autores entregando ao usuário o nome do autor e a sua respectiva citação.</p>
 
 <div align='center'>
-  <a href="https://www.djangoproject.com/" target="_blank">
-      <img src="./img/django_logo.png" width="150" height="150" />
+  <a href="https://docs.oracle.com/en/java/" target="_blank">
+      <img src="./img/java-logo.png" width="150" height="150" />
   </a>
 
-  <a href="https://www.django-rest-framework.org/" target="_blank">
-      <img src="./img/django_rest_logo.png" width="150" height="150" />
+  <a href="https://maven.apache.org/" target="_blank">
+      <img src="./img/Apache_Maven_logo.svg" width="150" height="150" />
   </a>
 
-  <a href="https://www.python.org/" target="_blank">
-      <img src="./img/python_logo.png" width="150" height="150" />
+  <a href="https://spring.io/projects/spring-boot" target="_blank">
+      <img src="./img/Spring_Boot.svg" width="150" height="150" />
   </a>
 </div>
 
