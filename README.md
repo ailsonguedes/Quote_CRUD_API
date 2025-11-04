@@ -8,11 +8,11 @@
   </a>
 
   <a href="https://maven.apache.org/" target="_blank">
-      <img src="./img/Apache_Maven_logo.svg" width="150" height="150" />
+      <img src="./img/maven-logo.png" width="150" height="150" />
   </a>
 
   <a href="https://spring.io/projects/spring-boot" target="_blank">
-      <img src="./img/Spring_Boot.svg" width="150" height="150" />
+      <img src="./img/springboot-logo.png" width="150" height="150" />
   </a>
 </div>
 
