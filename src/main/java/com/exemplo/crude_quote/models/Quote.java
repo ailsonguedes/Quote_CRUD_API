@@ -9,14 +9,15 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.annotation.Generated;
 
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 /**
- * This class will represent our car and its attributes:
+ * This class will represent our Quote and its attributes:
  * - ID
  * - Name
  * - Quote
@@ -28,14 +29,18 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 public class Quote {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
 
     @Schema(description = "Nome do autor da citação")
     @Column(name = "author", nullable = false)
+    @NotBlank(message = "O campo authorName não pode estar em branco")
+    @Size(min=3, max=50, message = "O nome do autor deve ter entre 3 e 50 caracteres" )
     private String authorName;
 
     @Schema(description = "Texto da citação")
     @Column(name = "quote", nullable = false)
+    @NotBlank(message = "O campo quoteText não pode estar em branco")
+    @Size(min=3, max=500, message = "O texto de citação deve ter entre 3 e 500 caracteres" )
     private String quoteText;
 
     // Constructors

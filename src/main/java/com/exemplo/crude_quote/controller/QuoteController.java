@@ -6,9 +6,7 @@ import com.exemplo.crude_quote.repository.QuoteRepository;
 import io.swagger.v3.oas.annotations.Operation;
 
 import jakarta.validation.Valid;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -38,14 +36,14 @@ public class QuoteController {
     @PatchMapping("/quote/{id}")
     public ResponseEntity<Quote> updatePartialQuote(
         @PathVariable Long id,
-        @RequestBody Quote quoteDetails) {
+        @Valid @RequestBody Quote quoteDetails) {
             
         return quoteRepository.findById(id)
             .map(quote -> {
-                if (quoteDetails.getAuthorName() != null && !quoteDetails.getAuthorName().isEmpty()){
+                if (quoteDetails.getAuthorName() != null && !quoteDetails.getAuthorName().trim().isEmpty()){
                     quote.setAuthorName(quoteDetails.getAuthorName());
                 }
-                if (quoteDetails.getQuoteText() != null && !quoteDetails.getQuoteText().isEmpty()){
+                if (quoteDetails.getQuoteText() != null && !quoteDetails.getQuoteText().trim().isEmpty()){
                     quote.setQuoteText(quoteDetails.getQuoteText());
                 }
                 Quote updateQuote = quoteRepository.save(quote);
